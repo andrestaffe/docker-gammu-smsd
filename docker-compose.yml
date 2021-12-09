@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+
+  gammu:
+    image: ghcr.io/andrestaffe/docker-gammu-smsd
+    container_name: gammue
+    restart: unless-stopped
+    devices:
+      - "/dev/serial/by-id/usb-HUAWEI_HUAWEI_Mobile-if03-port0:/dev/ttyUSB0"
+    volumes:
+      - "./gammu-smsd:/etc/gammu-smsd"
+      - "./onereceive.py:/etc/onereceive.py"
+    environment:
+      - CHAT_ID: "12345"
+      - BOT_TOKEN: "123123123123"
+      - PROXY: ""
