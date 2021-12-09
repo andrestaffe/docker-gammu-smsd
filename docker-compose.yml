@@ -12,6 +12,6 @@ services:
       - "./gammu-smsd:/etc/gammu-smsd"
       - "./onereceive.py:/etc/onereceive.py"
     environment:
-      - CHAT_ID: "12345"
-      - BOT_TOKEN: "123123123123"
-      - PROXY: ""
+      - CHAT_ID="12345"
+      - BOT_TOKEN="123123123123"
+      - PROXY=""
