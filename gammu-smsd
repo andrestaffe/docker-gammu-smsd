@@ -31,11 +31,11 @@ use_locking = yes
 # General SMSD settings, see gammu-smsdrc(5) for detailed description.
 [smsd]
 # SMSD service to use, one of FILES, MYSQL, PGSQL, DBI
-service = sql
+service = files
 # PIN for SIM card
 PIN = 1234
 # File (or stderr, syslog, eventlog) where information will be logged
-logfile = /data/smsd/gammu-smsd.log
+logfile = syslog
 # Amount of information being logged, each bit mean one level
 debuglevel = 0
 # Configuration for using more phones on same database

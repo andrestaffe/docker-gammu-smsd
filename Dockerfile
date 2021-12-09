@@ -1,6 +1,7 @@
 FROM alpine:latest
 
-RUN apk add --no-cache openssl ca-certificates gammu-smsd libdbi-drivers dumb-init python3 py3-requests
+RUN apk add --no-cache openssl ca-certificates gammu-smsd libdbi-drivers dumb-init python3 py3-requests \
+    && mkdir -p /var/spool/sms/{inbox,outbox,sent,error}
 
 # Override these environment variables
 ENV CHAT_ID='100000000'
